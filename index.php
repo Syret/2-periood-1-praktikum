@@ -7,19 +7,12 @@
 
 </head>
 <body>
-  <h1>First page</h1>
-    <?php
-      $link_file = "sec_page.php";
-      $age = 32;
-    ?>
-   
-   <a href="<?php echo "{$link_file}?age={$age}"; ?>">Teisele lehele</a><br>
-    <?php 
-      print_r($_GET); echo "<br>";
-      echo $_GET["name"];
-      $jada = array("syret", "21"); echo "<br>";
-      echo $jada[1];
-    ?>
-</a>
+  <?php $page_link = "second_page.php";
+    $name = "Syret";
+    $lastname = "Kärt";
+    $age = 21; ?>
+    <a href="<?php echo $page_link.'?name='.$name."&lastname=".$lastname."&age=".$age; ?>">Teisele lehele</a>
+    <?php $example = array("name" => "Syret", "lastname" => "Kärt"); ?><br>
+    <?php echo $_GET["test"]; ?>
 </body>
 </html>
